@@ -1,0 +1,51 @@
+ArachneBot/
+│
+├── config/                   # 配置模块
+│   └── settings.py           # 全局配置文件
+│
+├── data/                     # 数据存储
+│   ├── raw/                  # 原始数据存放
+│   ├── processed/            # 处理后的数据存放
+│
+├── logs/                     # 日志文件
+│   └── crawler.log           # 记录爬虫运行日志
+│
+├── resources/                # UI资源（图标、样式等）
+│   └── icons/                # 图标文件
+│
+├── src/                      # 源代码
+│   ├── __init__.py           # 包初始化
+│   ├── crawler/              # 爬虫模块
+│   │   ├── __init__.py       # 初始化文件
+│   │   ├── base_crawler.py   # 抽象基类，定义爬虫接口
+│   │   ├── simple_crawler.py # 简单爬虫实现
+│   │   ├── advanced_crawler.py# 高级爬虫实现（可扩展）
+│   │   └── utils.py          # 爬虫工具类，如请求处理、重试机制等
+│   │
+│   ├── parser/               # 数据解析模块
+│   │   ├── __init__.py       # 初始化文件
+│   │   ├── base_parser.py    # 抽象基类，定义解析接口
+│   │   ├── html_parser.py    # HTML数据解析
+│   │   └── json_parser.py    # JSON数据解析
+│   │
+│   ├── storage/              # 数据存储模块
+│   │   ├── __init__.py       # 初始化文件
+│   │   ├── file_storage.py   # 文件存储类
+│   │   └── db_storage.py     # 数据库存储类（如SQLite、MySQL等）
+│   │
+│   ├── ui/                   # PyQt6 UI模块
+│   │   ├── __init__.py       # 初始化文件
+│   │   ├── main_window.py    # 主窗口界面逻辑
+│   │   ├── components/       # 界面组件模块
+│   │   │   ├── progress_bar.py # 进度条组件
+│   │   │   └── control_panel.py # 控制面板组件
+│   │   └── event_handler.py  # 事件处理与爬虫逻辑交互
+│   │
+│   └── main.py               # 启动文件，连接爬虫逻辑与UI
+│
+├── tests/                    # 测试模块
+│   └── test_crawler.py       # 爬虫功能测试
+│
+├── requirements.txt          # 依赖包（如 requests, beautifulsoup4, PyQt6等）
+├── README.md                 # 项目说明文档
+└── setup.py                  # 项目安装脚本（可选）
